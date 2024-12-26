@@ -91,7 +91,7 @@ def handle_message(event):
             random = randint(1, 36)
             print(random)
             url = request.url_root + 'static/images/image' + str(random) + '.jpg'
-            url = url.replace("http", "https")
+            #url = url.replace("http", "https")
             app.logger.info("url=" + url)
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
@@ -106,7 +106,7 @@ def handle_message(event):
             random = randint(1, 24)
             print(random) 
             url = request.url_root + 'static/video/video' + str(random) + '.mp4'
-            url = url.replace("http", "https")
+            #url = url.replace("http", "https")
             app.logger.info("url=" + url)
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
@@ -119,7 +119,7 @@ def handle_message(event):
         
         elif text == '唱歌':
             url = request.url_root + 'static/duck.m4a'
-            url = url.replace("http", "https")
+            #url = url.replace("http", "https")
             app.logger.info("url=" + url)
             duration = 6000
             line_bot_api.reply_message_with_http_info(
