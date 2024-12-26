@@ -88,7 +88,7 @@ def handle_message(event):
             )
 
         elif text == '抽':
-            random = randint(1, 22)
+            random = randint(1, 36)
             print(random)
             url = request.url_root + 'static/images/image' + str(random) + '.jpg'
             url = url.replace("http", "https")
@@ -103,9 +103,9 @@ def handle_message(event):
             )
 
         elif text == '影片':
-            random = randint(1, 22)
+            random = randint(1, 24)
             print(random) 
-            url = request.url_root + 'static/duck' + str(random) + '.mp4'
+            url = request.url_root + 'static/video/video' + str(random) + '.mp4'
             url = url.replace("http", "https")
             app.logger.info("url=" + url)
             line_bot_api.reply_message_with_http_info(
